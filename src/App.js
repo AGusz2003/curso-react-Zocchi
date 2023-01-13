@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import Error404 from "./componentes/Error404";
 import Footer from "./componentes/Footer";
 // import Header from "./componentes/Header";
-import ItemDetailContainer from "./componentes/ItemDetailContainer";  //no aparece en el codigo del after
+import ItemDetailContainer from "./componentes/ItemDetailContainer";  
 import ItemListContainer from "./componentes/ItemListContainer";
 import NavBar from "./componentes/NavBar";
 import CartContextProvaider from "./componentes/context/CartContext";
 import Cart from "./componentes/Cart";
-//  import Productos from "./componentes/Productos";
+
 
 function App()  {
   return (

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import arrayproductos from "./Json/Productos.json"
 import ItemDetail from "./ItemDetail";
+import Documento from "./Firebase/Documento";
 
 
 const ItemDetailContainer = () => {
@@ -22,7 +23,8 @@ const ItemDetailContainer = () => {
     
     return (
     <div className="container">
-            <ItemDetail item={item} /> 
+            {/* <ItemDetail item={item} />  */}
+            <Documento />
             
     </div>
     )
