@@ -16,7 +16,7 @@ const ItemCount = ({stock}) =>{
     }
     const onAdd = () => {
         if (stock > 0) {
-            console.log(" Agregaste: " + counter + "Productos a tu Carrito")
+            console.log(" Agregaste: " + counter + " Productos a tu Carrito")
         }
     }
 
@@ -24,7 +24,7 @@ const ItemCount = ({stock}) =>{
     return(
     <div>
         <div className="row mb-3">
-            <div className="col-md-2 text center">
+            <div className="col-md-6 text center">
                 <div className="btn-group" role="group" aria-label="Basic outlined example">
                     <button type="button" className="btn btn-outline-danger" onClick={decrementarStock}> - </button>
                     <button type="button" className="btn btn-outline-danger">{counter}</button>
@@ -33,7 +33,7 @@ const ItemCount = ({stock}) =>{
             </div>
         </div>
         <div className="row">
-            <div className="col-md-2 text center">
+            <div className="col-md-6 text center">
                 <button type="button" className="btn btn-outline-danger" onClick={onAdd}> Agregar al Carrito </button>
             </div>
         </div>

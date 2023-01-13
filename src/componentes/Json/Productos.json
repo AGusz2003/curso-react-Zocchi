@@ -10,7 +10,7 @@
     {"id":9, "nombre":"PUMA RS-X Rick & Morty", "estado": "Nuevo", "imagen": "https://images.footlocker.com/is/image/EBFL2/38678101_a1?wid=520&hei=520&fmt=png-alpha", "precio":84.99, "stock":9,"categoria": "PUMA"   },
     {"id":10, "nombre":"Jordan Play Slides", "estado": "Nuevo", "imagen": "https://images.footlocker.com/is/image/EBFL2/C9835100_a1?wid=519&hei=519&fmt=png-alpha", "precio":29.99, "stock":1,"categoria": "Jordan"  },
     {"id":11, "nombre":"Nike KD14", "estado": "Nuevo", "imagen": "https://images.footlocker.com/is/image/EBFL2/D4336900_a1?wid=520&hei=520&fmt=png-alpha", "precio":109.99, "stock":7,"categoria": "Nike"  },
-    {"id":11, "nombre":"Nike Zoom Freak 3", "estado": "Nuevo", "imagen": "https://images.footlocker.com/is/image/EBFL2/A7845600_a1?wid=520&hei=520&fmt=png-alpha", "precio":120, "stock":4,"categoria": "Nike"  }    
+    {"id":12, "nombre":"Nike Zoom Freak 3", "estado": "Nuevo", "imagen": "https://images.footlocker.com/is/image/EBFL2/A7845600_a1?wid=520&hei=520&fmt=png-alpha", "precio":120, "stock":4,"categoria": "Nike"  }    
 
     
 ]
