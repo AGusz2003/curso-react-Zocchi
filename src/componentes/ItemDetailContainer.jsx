@@ -23,8 +23,8 @@ const ItemDetailContainer = () => {
     
     return (
     <div className="container">
-            {/* <ItemDetail item={item} />  */}
-            <Documento />
+            <ItemDetail item={item} /> 
+            {/* <Documento /> */}
             
     </div>
     )
