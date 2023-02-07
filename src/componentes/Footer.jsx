@@ -5,9 +5,9 @@ const Footer = () => {
         <div className="container py-5">
             <div className="row">
                 <div className="col-md-6">
-                    <a href="/" rel="noreferrer" className="mx-1"><img src={"/img/facebook..svg"} alt={"Facebook"} width={35} /></a>
-                    <a href="/" rel="noreferrer" className="mx-1"><img src={"/img/twitter..svg"} alt={"Twitter"} width={35} /></a>
-                    <a href="/" rel="noreferrer" className="mx-1"><img src={"/img/instagram..svg"} alt={"Instagram"} width={35} /></a>
+                    <a href="./componentes/Error404" rel="" className="mx-1"><img src={"/img/facebook..svg"} alt={"Facebook"} width={35} /></a>
+                    <a href="./componentes/Error404" rel="" className="mx-1"><img src={"/img/twitter..svg"} alt={"Twitter"} width={35} /></a>
+                    <a href="./componentes/Error404" rel="" className="mx-1"><img src={"/img/instagram..svg"} alt={"Instagram"} width={35} /></a>
                 
                 </div>
                 

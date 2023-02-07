@@ -12,7 +12,7 @@ const Cart = () => {
         <div className="container">
             <div className="row my-5">
                 <div className="col-md-12 text-center">
-                    <div className="alert alert-danger" role="alert"> No tiene productos seleccionados </div>
+                    <div className="alert alert-danger" role="alert"> Ya no Tiene Productos En el Carrrito!</div>
                     <Link to={"/"} className="btn btn-danger">Volver al inicio</Link>
                 </div>
             </div>
@@ -27,9 +27,9 @@ const Cart = () => {
                 <div className="col-md-12">
                 <table class="table">
                         <thead>
-                                <th>
-                                    <th scope="col" colSpan={5} className="text-end"><Link onClick={clear} className="btn btn-danger">Limpiar Carrito</Link></th>
-                                </th>
+                                <tr>
+                                    <td scope="col" colSpan={5} className=" text-end"><Link onClick={clear} className="btn btn-danger" title={"Limpiar Carrito"}>Limpiar Carrito</Link></td>
+                                </tr>
                             <tr>
                                 <th scope="col">&nbsp;</th>
                                 <th scope="col">Producto</th>
@@ -45,7 +45,7 @@ const Cart = () => {
                                             <td className="aling-middle"><b>{item.nombre}</b></td>
                                             <td className="aling-middle text-end">{item.quantity}</td>
                                             <td className="aling-middle text-end"> ${item.quantity * item.precio}</td>
-                                            <td className="aling-middle text-end"><Link onClick={() => {removeItem(item.id)}}><img src={"/img/trash3.svg"} alt={"Eliminar producto"} width={40} /> </Link> </td>
+                                            <td className="aling-middle text-end"><Link onClick={() => {removeItem(item.id)}} title={"Eliminar producto"}><img src={"/img/trash3.svg"} alt={"Eliminar producto"} width={40} /> </Link> </td>
                                     
                                     </tr>
                                 ) )
@@ -55,7 +55,7 @@ const Cart = () => {
                                     <td colSpan={2}>&nbsp;</td>
                                     <td className="text-end"> <b>Total a Pagar</b></td>
                                     <td className="text-end"><b>${sumTotal()}</b></td>
-                                    <td className="text-end"><button className="btn btn-danger">Finalizar Compra</button></td>
+                                    <td className="text-end"><Link to={"/Checkout"} className="btn btn-danger">Finalizar Compra</Link></td>
                                 </tr>       
                          </tbody>
                     </table>

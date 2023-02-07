@@ -1,6 +1,12 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 const Error404 =() => {
+    Swal.fire(
+        'Error 404',
+        'no disponible ',
+        'error'
+    )
     return(
        <div className="container my-5">
             <div className="row">

@@ -1,34 +1,32 @@
 import React, { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import arrayproductos from "./Json/Productos.json"
 import ItemDetail from "./ItemDetail";
-import Documento from "./Firebase/Documento";
+import Loading from "./Loading";
 
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([])
-    const {id} = useParams ();
+    const [item, setItem] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {id} = useParams();
 
+   
     useEffect(() => {
-        const promesa = new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                    resolve(arrayproductos.find(item => item.id === parseInt(id)))
-            }, 2000)  
-        })
-        promesa.then((data) => {
-            setItem(data)
-        })
-    }, [id]);
+        const db = getFirestore();
+        const item = doc(db, "Productos", id);
+        getDoc(item).then((snapShot) => {
+            if (snapShot.exists()) {
+                setItem({id:snapShot.id, ...snapShot.data()});
+                setLoading(false);
+            } 
+        });
+    }, []);
 
-    
     return (
-    <div className="container">
-            <ItemDetail item={item} /> 
-            {/* <Documento /> */}
-            
-    </div>
+        <div className="container my-5">
+           {loading ? <Loading /> : <ItemDetail item={item} />}
+        </div>
     )
-
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
